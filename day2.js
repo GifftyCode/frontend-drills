@@ -91,8 +91,8 @@ if(age >= 18 && isCitizen === true) {
 // - If both true: "Login successful"
 // - If either false: "Login failed"
 
-let username = "admin"
-let password = "12345"
+let username = "Gifftybabe"
+let password = "Sha414"
 
 if(username === "admin" && password === "12345") {
     console.log("Login successful")

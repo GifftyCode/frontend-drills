@@ -22,9 +22,9 @@ console.log(`My name is ${firstName} ${lastName}, I am ${age} years old...`)
 // - Add 5 to your age and store in a new variable
 let newAge = age + 5
 // - Create a variable for the year you were born (2025 - your age)
-const yearOfBirth = 2026 - age
+const birthYear = 2026 - age
 // - Log both
-console.log(newAge, yearOfBirth)
+console.log(newAge, birthYear)
 
 // Exercise 4: Work with your skills array
 // - Log the first skill

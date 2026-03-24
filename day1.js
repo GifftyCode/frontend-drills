@@ -9,7 +9,7 @@ const lastName = "Uloka"
 // - your age
 const age = 30
 // - your city
-const city = "Abuja"
+let city = "Abuja"
 // - whether you're currently employed (true/false)
 let isEmployed = true
 // - an array of 3 programming languages you want to master
@@ -35,6 +35,8 @@ console.log(programmingLanguages[programmingLanguages.length-1])
 console.log(programmingLanguages.length)
 // - Add a new skill to the end of the array
 programmingLanguages.push("Python")
+programmingLanguages.unshift("Kotlin")
+programmingLanguages.pop()
 // - Log the updated array
 console.log(programmingLanguages)
 

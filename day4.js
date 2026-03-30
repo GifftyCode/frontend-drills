@@ -74,12 +74,10 @@ console.log(celsiusToFahrenheit(37))
 // Use early returns (return immediately when condition fails)
 
 const canDrive = (age, hasLicense) => {
-    if(age < 18){
-        return "Too young"
-    } 
-    if (hasLicense === false) {
-        return "No license"
-    }  
+    if(age < 18) return "Too young"
+    
+    if (hasLicense === false)  return "No license"
+    
         return "Can drive"
     
 

@@ -26,13 +26,9 @@ console.log(multiply(5, 3))
 // Test with several numbers
 
 const isEven = function(number) {
-    if(number % 2 === 0) {
-        return true
-    } else {
-        return false
-    }
+    return number % 2 === 0
 }
-console.log(isEven(15))
+console.log(isEven(10))
 
 // Exercise 4: String Manipulation Function
 // Create a function called getFullName that:
@@ -66,6 +62,30 @@ function calculate(num1, num2, operator) {
     }
 }
 console.log(calculate(12, 6, "%"))
+
+
+const operations = {
+    "+": (a, b) => a + b,
+    "-": (a, b) => a - b,
+    "*" : (a, b) => a * b
+}
+
+
+    const calculateNum = (num1, num2, operator) => {
+        const operationLogic = operations[operator]
+
+        if(operationLogic) {
+            return operationLogic(num1, num2)
+        } else  {
+            return "Invalid operation"
+        }
+    }
+
+
+console.log(calculateNum(5, 8, "+"));
+console.log(calculateNum(10, 2, "-"));
+console.log(calculateNum(3, 4, "*"));
+console.log(calculateNum(5, 2, "%"));
 
 // Exercise 6: Age Category
 // Create a function called getAgeCategory that:

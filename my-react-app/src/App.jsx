@@ -1,17 +1,22 @@
-const isLoggedIn = true;
-const isPremiumUser = true;
-const name = "Gift";
+import { useState } from "react";
 
 function App() {
-  if (!isLoggedIn) {
-    return <h1>Access Denied... Please log in</h1>;
-  }
+  const [likes, setLikes] = useState(0);
+  let [hasLiked, setHasLiked] = useState(false);
 
   return (
     <div>
-      <h1>Welcome back {name}!</h1>
-      {isPremiumUser && <p>Premium Member...</p>}
-      {isPremiumUser ? <p>You have full access</p> : <p>Upgrade to premium</p>}
+      <h4>{likes}</h4>
+      <button
+        disabled={likes >= 1}
+        onClick={() => {
+          setLikes(likes + 1);
+          setHasLiked(true);
+        }}
+      >
+        Like
+      </button>
+      {hasLiked ? <p>You liked this</p> : ""}
     </div>
   );
 }
